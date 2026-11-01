@@ -1,0 +1,1002 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Baseline reference on the Pandemic Fund Resilient Philippines Project, prepared by the Epidemiology Bureau and the RP Project Management Office.">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Resilient Philippines Baseline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Literata:opsz,wght@7..72,500..800&display=swap">
+<style>
+/* Layout: a single reading column (max 1100px) under a sticky section bar; dense reference tables sit in their own scroll containers. */
+/* Palette: purple #A320E0 and yellow #FBD301 as primaries; teal completes the triad for Bank-executed lines; neutrals lean purple. */
+:root{
+  --bg:#F7F5FA; --surface:#FFFFFF; --ink:#1B1426; --muted:#574E66; --faint:#746B86; --rule:#E2DCEA; --rule-strong:#C5BCD3;
+  --accent:#A320E0; --accent-soft:#F3E6FC; --on-accent:#FFFFFF;
+  --yellow:#FBD301; --yellow-edge:#B89A00;
+  --c1:#A320E0; --c1-soft:#F3E6FC; --c1b:#5E1386; --c1c:#D2A3F3;
+  --c2:#FBD301; --c2-soft:#FFF6C2; --c2-edge:#B89A00;
+  --c3:#5D5570; --c3-soft:#ECE8F2;
+  --bank:#0D8A79; --bank-soft:#DDF3EF;
+  --derived:#9089A0;
+  --ok:#23784A; --ok-soft:#E0F2E7;
+  --warn:#9A4708; --warn-soft:#FDEBDA;
+  --check:#C0262D; --check-soft:#FCE6E6;
+  --idle:#625A72; --idle-soft:#EEEBF2;
+  --mast-bg:#A320E0; --mast-ink:#FFFFFF; --mast-muted:#F1E2FB; --mast-hi:#FBD301;
+  --tier1-bg:#3E0D5C; --tier1-ink:#FFFFFF;
+  --display:"Literata",Georgia,"Times New Roman",serif;
+  --body:"Atkinson Hyperlegible","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:"Atkinson Hyperlegible","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#110C17; --surface:#1A1322; --ink:#EEE8F4; --muted:#B5AAC4; --faint:#958AA6; --rule:#2F2639; --rule-strong:#45394F;
+    --accent:#C98AF5; --accent-soft:#2E1840; --on-accent:#1A1322;
+    --yellow:#FBD301; --yellow-edge:#FBD301;
+    --c1:#C98AF5; --c1-soft:#2E1840; --c1b:#8E3FD0; --c1c:#E6CCFA;
+    --c2:#FBD301; --c2-soft:#3A3100; --c2-edge:#FBD301;
+    --c3:#A49BB5; --c3-soft:#251D2E;
+    --bank:#4FD1BF; --bank-soft:#12332E;
+    --derived:#776D88;
+    --ok:#72D39C; --ok-soft:#153222;
+    --warn:#F5A55A; --warn-soft:#3A2410;
+    --check:#FF8E8E; --check-soft:#3E1719;
+    --idle:#ABA1BB; --idle-soft:#241D2C;
+    --mast-bg:#2B0B40; --mast-ink:#F6EEFC; --mast-muted:#D9C8E8; --mast-hi:#FBD301;
+    --tier1-bg:#2B0B40; --tier1-ink:#F6EEFC;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#110C17; --surface:#1A1322; --ink:#EEE8F4; --muted:#B5AAC4; --faint:#958AA6; --rule:#2F2639; --rule-strong:#45394F;
+  --accent:#C98AF5; --accent-soft:#2E1840; --on-accent:#1A1322;
+  --yellow:#FBD301; --yellow-edge:#FBD301;
+  --c1:#C98AF5; --c1-soft:#2E1840; --c1b:#8E3FD0; --c1c:#E6CCFA;
+  --c2:#FBD301; --c2-soft:#3A3100; --c2-edge:#FBD301;
+  --c3:#A49BB5; --c3-soft:#251D2E;
+  --bank:#4FD1BF; --bank-soft:#12332E;
+  --derived:#776D88;
+  --ok:#72D39C; --ok-soft:#153222;
+  --warn:#F5A55A; --warn-soft:#3A2410;
+  --check:#FF8E8E; --check-soft:#3E1719;
+  --idle:#ABA1BB; --idle-soft:#241D2C;
+  --mast-bg:#2B0B40; --mast-ink:#F6EEFC; --mast-muted:#D9C8E8; --mast-hi:#FBD301;
+  --tier1-bg:#2B0B40; --tier1-ink:#F6EEFC;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--surface)}
+a{color:var(--accent);text-underline-offset:2px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.num,.tnum,td,th{font-variant-numeric:tabular-nums}
+.mono{font-family:var(--mono);font-size:.86em}
+h1,h2,h3,h4{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.15}
+h2{font-size:clamp(1.45rem,2.6vw,1.9rem);font-weight:750;font-stretch:88%;letter-spacing:-.005em}
+h3{font-size:1.08rem;font-weight:700;font-stretch:92%;margin-top:6px}
+h4{font-size:.95rem;font-weight:700}
+p{margin:0;max-width:68ch}
+.muted{color:var(--muted)}
+.small{font-size:.86rem}
+.eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+/* Masthead */
+.masthead{background:var(--mast-bg);color:var(--mast-ink);border-bottom:6px solid var(--yellow)}
+.masthead .eyebrow{color:var(--mast-muted)}
+.masthead .wrap{padding-block:28px 26px;display:grid;gap:14px}
+.masthead h1{font-size:clamp(1.9rem,4.6vw,3.1rem);font-weight:800;font-stretch:80%;letter-spacing:-.01em;max-width:22ch}
+.masthead h1 span{color:var(--mast-hi)}
+.lede{font-size:1.06rem;color:var(--mast-ink);max-width:70ch}
+.asof{font-size:.86rem;color:var(--mast-muted);max-width:80ch}
+
+/* Sticky section bar */
+.secnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);border-bottom:1px solid var(--rule)}
+.secnav .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:thin;padding-block:6px}
+.secnav a{flex:0 0 auto;font-family:var(--body);font-weight:700;font-size:.84rem;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:6px;white-space:nowrap}
+.secnav a:hover{background:var(--accent-soft);color:var(--ink)}
+
+main .wrap{display:grid;gap:56px;padding-block:32px 64px}
+section{display:grid;gap:18px;scroll-margin-top:64px;min-width:0}
+.sechead{display:grid;gap:8px;border-top:2px solid var(--ink);padding-top:14px}
+.sechead .row{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:baseline}
+.secnum{font-family:var(--mono);font-size:.8rem;font-weight:700;color:var(--accent)}
+.basis{display:inline-flex;gap:6px;flex-wrap:wrap}
+.tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;text-transform:uppercase;padding:2px 7px;border-radius:4px;border:1px solid var(--rule-strong);color:var(--muted);background:var(--surface);white-space:nowrap}
+.tag.doc{border-color:var(--ink);color:var(--ink)}
+.tag.der{border-style:dashed}
+.tag.tbc{border-color:var(--check);color:var(--check)}
+
+/* Figure grid */
+.figs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:10px;overflow:hidden}
+.figs.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:720px){.figs,.figs.three{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.fig{background:var(--surface);padding:16px 16px 14px;display:grid;gap:4px;align-content:start;min-width:0}
+.fig .v{font-family:var(--display);font-weight:800;font-stretch:78%;font-size:clamp(1.35rem,3vw,2.15rem);line-height:1.05;letter-spacing:-.01em;overflow-wrap:anywhere}
+.fig .k{font-size:.84rem;color:var(--ink);line-height:1.35}
+.fig .s{font-family:var(--mono);font-size:.68rem;color:var(--faint)}
+.fig.alert .v{color:var(--check)}
+
+/* Contents & guide */
+.twocol{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+@media (max-width:760px){.twocol{grid-template-columns:minmax(0,1fr)}}
+ol.toc{margin:0;padding:0;list-style:none;columns:2;column-gap:24px}
+@media (max-width:520px){ol.toc{columns:1}}
+ol.toc li{break-inside:avoid;padding:3px 0;display:flex;gap:10px}
+ol.toc li .mono{color:var(--faint);min-width:2ch}
+ol.toc a{color:var(--ink);text-decoration:none}
+ol.toc a:hover{color:var(--accent);text-decoration:underline}
+.paths{display:grid;gap:10px}
+.path{display:grid;grid-template-columns:9.5rem minmax(0,1fr);gap:12px;padding:10px 0;border-bottom:1px solid var(--rule)}
+.path:last-child{border-bottom:0}
+@media (max-width:520px){.path{grid-template-columns:minmax(0,1fr);gap:2px}}
+.path b{font-family:var(--body)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:.84rem;color:var(--muted)}
+.key{display:inline-flex;align-items:center;gap:6px}
+.sw{width:12px;height:12px;border-radius:3px;display:inline-block;flex:0 0 auto}
+.sw.c1{background:var(--c1)} .sw.c2{background:var(--c2);box-shadow:inset 0 0 0 1px var(--c2-edge)} .sw.c3{background:var(--c3)} .sw.bank{background:var(--bank)} .sw.der{background:repeating-linear-gradient(45deg,var(--derived) 0 2px,transparent 2px 5px);border:1px solid var(--derived)} .sw.chk{background:var(--check)}
+
+/* Cards and panels */
+.panel{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:18px;display:grid;gap:10px;align-content:start;min-width:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:14px}
+ul.plain{margin:0;padding-left:1.1em;display:grid;gap:4px}
+ul.plain li{max-width:68ch}
+.callout{border-left:3px solid var(--check);background:var(--check-soft);padding:10px 14px;border-radius:0 8px 8px 0;font-size:.92rem}
+.callout.info{border-left-color:var(--accent);background:var(--accent-soft)}
+.src{font-family:var(--mono);font-size:.7rem;color:var(--faint)}
+
+/* Bars */
+.stack{display:flex;height:34px;border-radius:6px;overflow:hidden;border:1px solid var(--rule)}
+.stack span{display:block;height:100%}
+.stack .c1{background:var(--c1)} .stack .c1b{background:var(--c1b)} .stack .c1c{background:var(--c1c)} .stack .c2{background:var(--c2)} .stack .c3{background:var(--c3)} .stack .bank{background:var(--bank)}
+.stack .der{background:repeating-linear-gradient(45deg,var(--derived) 0 3px,var(--surface) 3px 7px)}
+.stack .acc{background:var(--accent)} .stack .idle{background:var(--idle-soft)}
+.ritm{background:repeating-linear-gradient(90deg,var(--c1b) 0 4px,var(--c1c) 4px 8px)}
+.stackkey{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:8px 18px;font-size:.86rem}
+.stackkey div{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 8px;align-items:start}
+.stackkey .sw{margin-top:5px}
+.stackkey b{font-variant-numeric:tabular-nums}
+.stackkey small{grid-column:2;color:var(--muted);font-size:.78rem;line-height:1.3}
+
+/* Column chart */
+.qchart{display:grid;grid-template-columns:44px minmax(0,1fr);gap:8px}
+.qaxis{position:relative;height:200px;font-family:var(--mono);font-size:.68rem;color:var(--faint)}
+.qaxis span{position:absolute;right:0;transform:translateY(50%)}
+.qplot{position:relative;height:200px;border-left:1px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong);display:grid;grid-template-columns:repeat(4,1fr);align-items:end;padding:0 4%}
+.qgrid{position:absolute;left:0;right:0;border-top:1px dashed var(--rule)}
+.qgroup{display:flex;gap:6px;justify-content:center;align-items:flex-end;height:100%;position:relative;z-index:1}
+.qbar{width:min(34px,38%);border-radius:3px 3px 0 0;position:relative}
+.qbar.o{background:var(--c1c)} .qbar.d{background:var(--c1)}
+.qbar em{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);font-style:normal;font-family:var(--mono);font-size:.64rem;color:var(--muted);white-space:nowrap;padding-bottom:2px}
+.qlabels{grid-column:2;display:grid;grid-template-columns:repeat(4,1fr);padding:0 4%;font-family:var(--mono);font-size:.72rem;color:var(--muted);text-align:center}
+@media (max-width:520px){.qbar em{font-size:.56rem}}
+
+/* Timeline (time squeeze) */
+.tl{display:grid;gap:10px}
+.tlrow{display:grid;grid-template-columns:13rem minmax(0,1fr);gap:12px;align-items:center}
+@media (max-width:640px){.tlrow{grid-template-columns:minmax(0,1fr);gap:4px}}
+.tlrow .lab{font-size:.84rem;line-height:1.3}
+.tlrow .lab small{display:block;color:var(--muted);font-size:.76rem}
+.track{position:relative;height:22px;background:var(--idle-soft);border-radius:4px}
+.track i{position:absolute;top:0;bottom:0;border-radius:4px;display:block}
+.track .design{background:var(--c3-soft);border:1px dashed var(--c3)}
+.track .grant{background:var(--c1)}
+.track .proc{background:var(--warn)}
+.track .deliv{background:var(--yellow);box-shadow:inset 0 0 0 1px var(--yellow-edge)}
+.track .wb{background:var(--bank)}
+.tlaxis{position:relative;height:18px;font-family:var(--mono);font-size:.66rem;color:var(--faint)}
+.tlaxis span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.tlaxis span:first-child{transform:none}
+.tlaxis span:last-child{transform:translateX(-100%)}
+.tlwrap{position:relative}
+.marker{position:absolute;top:0;bottom:22px;border-left:2px solid var(--check);pointer-events:none}
+.marker b{position:absolute;top:-18px;left:4px;font-family:var(--mono);font-size:.64rem;color:var(--check);white-space:nowrap;font-weight:500}
+.marker.today{border-left-color:var(--ink)} .marker.today b{color:var(--ink)}
+.tlbody{display:grid;gap:10px;padding-top:20px}
+.tlaxisrow{display:grid;grid-template-columns:13rem minmax(0,1fr);gap:12px}
+@media (max-width:640px){.tlaxisrow{grid-template-columns:minmax(0,1fr)}.tlaxisrow>div:first-child{display:none}}
+
+/* Tables */
+.tbl{overflow-x:auto;border:1px solid var(--rule);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--rule)}
+thead th{font-family:var(--body);font-weight:700;font-size:.8rem;color:var(--muted);background:var(--surface);position:sticky;top:0;white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.r,th.r{text-align:right;white-space:nowrap}
+td.nw{white-space:nowrap}
+tr.subtotal td{background:var(--c3-soft);font-weight:600}
+tr.grp td{background:var(--bg);font-family:var(--body);font-weight:700;font-size:.82rem;letter-spacing:.02em;color:var(--ink);border-bottom:1px solid var(--rule-strong)}
+.wide table{min-width:980px}
+.mid table{min-width:720px}
+.pkg{min-width:15rem;max-width:22rem}
+.pkg small{display:block;color:var(--muted);font-size:.78rem;margin-top:2px}
+.links{white-space:nowrap;font-size:.82rem}
+.links a+a{margin-left:8px}
+.cdot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:1px}
+.cdot.c11{background:var(--c1)} .cdot.c12{background:var(--c1b)} .cdot.c13{background:var(--c1c)} .cdot.c3{background:var(--c3)} .cdot.bank{background:var(--bank)} .cdot.c2{background:var(--c2);box-shadow:inset 0 0 0 1px var(--c2-edge)}
+
+/* Pills */
+.pill{display:inline-block;font-size:.74rem;font-weight:600;padding:1px 8px;border-radius:999px;white-space:nowrap;border:1px solid transparent}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+.pill.prog{background:var(--warn-soft);color:var(--warn)}
+.pill.idle{background:var(--idle-soft);color:var(--idle)}
+.pill.chk{background:var(--check-soft);color:var(--check)}
+
+/* Filter chips */
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:600 .82rem var(--body);padding:6px 12px;border-radius:999px;border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.chip:hover{border-color:var(--ink)}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:10px;counter-reset:st}
+.step{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:12px 14px;display:grid;gap:6px;align-content:start}
+.step .n{font-family:var(--mono);font-size:.72rem;color:var(--faint)}
+.step h4{font-size:.95rem}
+.step p{font-size:.82rem;color:var(--muted)}
+
+/* Windows (dated cards) */
+.windows{display:grid;gap:0;border-left:2px solid var(--rule-strong);margin-left:6px}
+.win{display:grid;grid-template-columns:11rem minmax(0,1fr);gap:14px;padding:12px 0 12px 18px;position:relative}
+.win::before{content:"";position:absolute;left:-7px;top:18px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--ink)}
+.win.hard::before{background:var(--check);border-color:var(--check)}
+.win.past::before{background:var(--rule-strong);border-color:var(--rule-strong)}
+.win .when{font-family:var(--display);font-stretch:88%;font-weight:700;font-size:.98rem}
+.win .when small{display:block;font-family:var(--mono);font-weight:400;font-size:.68rem;color:var(--faint);letter-spacing:.03em}
+.win ul{margin:0;padding-left:1.1em;display:grid;gap:3px;font-size:.92rem}
+@media (max-width:600px){.win{grid-template-columns:minmax(0,1fr);gap:4px}}
+
+/* Tiers */
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px}
+.tier{border-radius:10px;padding:16px;display:grid;gap:8px;align-content:start;border:1px solid var(--rule)}
+.tier.t1{background:var(--tier1-bg);color:var(--tier1-ink);border-color:var(--tier1-bg);border-top:4px solid var(--yellow)}
+.tier.t1 .muted,.tier.t1 .src{color:var(--tier1-ink);opacity:.8}
+.tier.t2{background:var(--c3-soft)}
+.tier.t3{background:var(--surface)}
+.tier h3{font-size:1.02rem;margin:0}
+
+footer{border-top:1px solid var(--rule);background:var(--surface)}
+footer .wrap{padding-block:20px 28px;font-size:.84rem;color:var(--muted);display:grid;gap:6px}
+</style>
+
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Pandemic Fund · Resilient Philippines Project · World Bank P512497</div>
+    <h1>Resilient Philippines as it stands: <span>plans, progress and budget</span></h1>
+    <p class="lede">This page sets out what the Resilient Philippines (RP) Project funds, how far it has moved, where the money sits, and what closes when. It serves as a baseline reference for DOH leadership and the project team. It states positions found in the project documents. It makes no recommendations.</p>
+    <p class="asof">Figures are as of the 2027 Annual Work and Financial Plan prepared for World Bank submission (30 October 2026), the Procurement Plan and Document Tracker, and the first World Bank Implementation Support Mission (26 to 29 October 2026). Prepared by the Epidemiology Bureau and the Resilient Philippines Project Management Office on 1 November 2026 from the documents in the project folder. The DOH share is covered in detail. The DA share is covered at component level only.</p>
+  </div>
+</header>
+
+<nav class="secnav" aria-label="Sections">
+  <div class="wrap">
+    <a href="#glance">At a glance</a>
+    <a href="#brief">RP in brief</a>
+    <a href="#packages">What it buys</a>
+    <a href="#money">Money</a>
+    <a href="#windows">Decision windows</a>
+    <a href="#readiness">Readiness</a>
+    <a href="#progress">Progress</a>
+    <a href="#squeeze">Time squeeze</a>
+    <a href="#results">Results</a>
+    <a href="#people">People</a>
+    <a href="#rules">Rules</a>
+    <a href="#check">Check</a>
+    <a href="#sources">Sources</a>
+    <a href="#terms">Terms</a>
+  </div>
+</nav>
+
+<main>
+<div class="wrap">
+
+<!-- AT A GLANCE -->
+<section id="glance" aria-label="At a glance">
+  <div class="figs">
+    <div class="fig"><div class="v num">US$25M</div><div class="k">Pandemic Fund grant across all channels</div><div class="s">DPO 2026-1557 · launch concept note</div></div>
+    <div class="fig"><div class="v num">US$18.85M</div><div class="k">Recipient-executed grant to DOH and DA (US$18,846,201)</div><div class="s">JMC v4</div></div>
+    <div class="fig"><div class="v num">US$10.125M</div><div class="k">DOH share of the recipient-executed grant</div><div class="s">AWFP reconciliation sheet</div></div>
+    <div class="fig alert"><div class="v num">US$0</div><div class="k">Disbursed as of the first mission</div><div class="s">ISM wrap-up, 29 Oct 2026</div></div>
+    <div class="fig"><div class="v num">7 Jul 2026</div><div class="k">Grant effective, after signing on 4 June</div><div class="s">Kick-off deck · JMC v4</div></div>
+    <div class="fig"><div class="v num">31 Mar 2028</div><div class="k">Closing date, 17 months from November 2026</div><div class="s">JMC v4</div></div>
+    <div class="fig"><div class="v num">15 + 5</div><div class="k">DOH RETF TORs and Bank-executed TORs submitted</div><div class="s">ISM wrap-up deck</div></div>
+    <div class="fig"><div class="v num">20 · 3 · 200</div><div class="k">LGUs harmonized, labs upgraded, people trained by March 2028</div><div class="s">JMC Annex 2</div></div>
+  </div>
+
+  <div class="twocol">
+    <div class="panel">
+      <h3>Contents</h3>
+      <ol class="toc">
+        <li><span class="mono">01</span><a href="#brief">RP in brief</a></li>
+        <li><span class="mono">02</span><a href="#packages">What the DOH share buys</a></li>
+        <li><span class="mono">03</span><a href="#money">Where the money sits</a></li>
+        <li><span class="mono">04</span><a href="#windows">Decision windows</a></li>
+        <li><span class="mono">05</span><a href="#readiness">Readiness to release funds</a></li>
+        <li><span class="mono">06</span><a href="#progress">Progress so far</a></li>
+        <li><span class="mono">07</span><a href="#squeeze">The time squeeze</a></li>
+        <li><span class="mono">08</span><a href="#results">Results due by March 2028</a></li>
+        <li><span class="mono">09</span><a href="#people">People and governance</a></li>
+        <li><span class="mono">10</span><a href="#rules">What is fixed, what can move</a></li>
+        <li><span class="mono">11</span><a href="#check">Check before quoting</a></li>
+        <li><span class="mono">12</span><a href="#sources">Sources</a></li>
+        <li><span class="mono">13</span><a href="#terms">Terms</a></li>
+      </ol>
+    </div>
+    <div class="panel">
+      <h3>How to use this reference</h3>
+      <div class="paths">
+        <div class="path"><b>New to RP</b><span>Read 01 for the design and money, then 08 for the results the project must show.</span></div>
+        <div class="path"><b>Deciding</b><span>Read 04, 05 and 07 for what closes when, then 10 for what can change and who approves it.</span></div>
+        <div class="path"><b>Working the details</b><span>Use 02 and 03 for packages and figures. Read 11 before quoting any number.</span></div>
+      </div>
+      <div class="legend">
+        <span class="key"><span class="tag doc">Documented</span> stated in a source</span>
+        <span class="key"><span class="tag der">Derived</span> computed or grouped here</span>
+        <span class="key"><span class="tag tbc">To confirm</span> sources disagree or are silent</span>
+      </div>
+      <div class="legend">
+        <span class="key"><span class="sw c1"></span>Component 1, human health (DOH)</span>
+        <span class="key"><span class="sw c2"></span>Component 2, animal health (DA)</span>
+        <span class="key"><span class="sw c3"></span>Component 3, project management</span>
+        <span class="key"><span class="sw bank"></span>Bank-executed (BETF)</span>
+        <span class="key"><span class="sw der"></span>Derived figure</span>
+        <span class="key"><span class="sw chk"></span>Item to check</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 BRIEF -->
+<section id="brief">
+  <div class="sechead">
+    <div class="row"><span class="secnum">01</span><h2>RP in brief</h2><span class="basis"><span class="tag doc">Documented</span><span class="tag der">Derived split of US$25M</span></span></div>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <h3>What it is for</h3>
+      <p>The Project Development Objective is to improve the country's capacity to detect, report and respond to existing and emerging pathogens with epidemic potential among humans, animals and wildlife.</p>
+      <p class="muted small">By March 2028, the project expects community surveillance in pilot LGUs to flag events early. It expects DOH and DA to see the same signal on a shared One Health dashboard. It expects upgraded laboratories linked to a One Health Genomics Consortium to confirm cases.</p>
+      <p class="src">Kick-off deck, 26 Oct 2026</p>
+    </div>
+    <div class="panel">
+      <h3>Why it was funded</h3>
+      <ul class="plain">
+        <li>The Philippines is a global hotspot for zoonotic spillover.</li>
+        <li>The country ranked first in the 2024 World Risk Index for disaster vulnerability.</li>
+        <li>The 2024 Joint External Evaluation called for stronger links across multisectoral coordination platforms.</li>
+        <li>The Bank's kick-off deck cites a benefit-cost ratio of 1.7 and an internal rate of return of 26%.</li>
+      </ul>
+      <p class="src">Kick-off deck; JMC v4 rationale</p>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>What it costs: the US$25 million, by channel</h3>
+    <div class="stack" role="img" aria-label="US$25 million split: DOH recipient-executed 10.125 million, DA recipient-executed 8.72 million derived, Bank-executed 1.95 million, other World Bank and FAO support 4.20 million derived">
+      <span class="c1" style="width:40.50%"></span><span class="c2" style="width:34.88%"></span><span class="bank" style="width:7.80%"></span><span class="der" style="width:16.82%"></span>
+    </div>
+    <div class="stackkey">
+      <div><span class="sw c1"></span><b>US$10.125M · DOH (RETF)</b><small>Components 1 and 3.1. AWFP reconciliation.</small></div>
+      <div><span class="sw c2"></span><b>US$8.72M · DA-BAI (RETF)</b><small>Derived: US$18,846,201 less the DOH share. Covers Component 2 (US$7.90M) and DA's Component 3 share.</small></div>
+      <div><span class="sw bank"></span><b>US$1.95M · World Bank-executed</b><small>Five BETF activities. US$1.62M net after 17% cost recovery. Tracker.</small></div>
+      <div><span class="sw der"></span><b>US$4.20M · other WB and FAO support</b><small>Derived remainder. The folder does not itemize FAO's share.</small></div>
+    </div>
+  </div>
+
+  <div class="tbl mid">
+    <table>
+      <thead><tr><th>Component</th><th>Lead</th><th class="r">US$</th><th>What it finances</th></tr></thead>
+      <tbody>
+        <tr><td><span class="cdot c11"></span>1.1 Early warning and disease surveillance</td><td>DOH (EB)</td><td class="r">3,400,000</td><td>DHIS2 One Health information system, community event-based surveillance, joint analytics training, EB Mini Command Center</td></tr>
+        <tr><td><span class="cdot c12"></span>1.2 Laboratory systems</td><td>DOH (OHL, RITM)</td><td class="r">5,250,000</td><td>Essential diagnostics list and point-of-care pilot, laboratory information system, laboratory competency framework, laboratory strategic plan, One Health Genomics Consortium</td></tr>
+        <tr><td><span class="cdot c13"></span>1.3 Workforce capacity</td><td>DOH (EB, HFSRB)</td><td class="r">600,000</td><td>Multisectoral PPR workforce inventory, regulatory officer training</td></tr>
+        <tr class="subtotal"><td>Component 1 · Human health</td><td>DOH</td><td class="r">9,250,000</td><td></td></tr>
+        <tr><td><span class="cdot c2"></span>Component 2 · Animal health</td><td>DA-BAI</td><td class="r">7,900,000</td><td>Animal disease surveillance, national reference laboratory and two regional animal disease diagnostic laboratories (Regions VII and XII), biosecurity, laboratory information system, command center</td></tr>
+        <tr><td><span class="cdot c3"></span>Component 3 · Project management, M&amp;E</td><td>DOH and DA</td><td class="r">1,700,000</td><td>DOH share (3.1) is US$875,000 for PMO staff, equipment and M&amp;E</td></tr>
+        <tr class="subtotal"><td>Recipient-executed grant</td><td></td><td class="r">18,846,201</td><td>Kick-off deck rounds this to US$18.85M</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="src">Kick-off deck; JMC v4; AWFP 2027 tab; ISM wrap-up deck</p>
+
+  <div class="grid2">
+    <div class="panel">
+      <h3>How a dollar moves</h3>
+      <p class="small muted">Recipient-executed (RETF) funds follow government systems. Bank-executed (BETF) funds never pass through DOH.</p>
+      <ol class="plain small" style="margin:0;padding-left:1.2em;display:grid;gap:4px">
+        <li>The Pandemic Fund channels the grant through the World Bank as implementing entity.</li>
+        <li>The Grant Agreement with the Government, through DOF, sets the terms.</li>
+        <li>DOH and DA hold designated accounts: a DOH MDS account at Land Bank and a DA US-dollar account.</li>
+        <li>A withdrawal application draws grant funds. DBM releases the SARO and NCA.</li>
+        <li>DOH or DA procures under Bank rules, with Bank no-objection where required, and pays contracts.</li>
+      </ol>
+      <p class="small"><b>BETF route:</b> the World Bank formats the TOR, proposes the procurement setup for DOH no-objection, contracts and pays. The office reviews deliverables and gives technical clearance.</p>
+      <p class="src">ISM wrap-up deck; kick-off deck</p>
+    </div>
+    <div class="panel">
+      <h3>Where it works</h3>
+      <ul class="plain small">
+        <li><b>National:</b> digital platforms hosted by KMITS; reference laboratories at RITM and DA's ADDRL; the One Health Genomics Consortium.</li>
+        <li><b>Subnational (DOH):</b> community surveillance pilots and point-of-care testing in Region VI (Western Visayas) and Region XII (SOCCSKSARGEN). Point-of-care testing targets six municipalities without laboratory access.</li>
+        <li><b>Subnational (DA):</b> regional animal disease diagnostic laboratories in Regions VII and XII.</li>
+      </ul>
+      <p class="src">JMC v4 scope; kick-off deck; ISM wrap-up deck</p>
+    </div>
+  </div>
+
+  <div class="tbl mid">
+    <table>
+      <thead><tr><th>UNA para sa Kalusugan pillar</th><th>What RP finances there</th><th>Lead offices</th></tr></thead>
+      <tbody>
+        <tr><td>Pillar 4 · IT transformation</td><td>One Health data platform and dashboard, laboratory information systems, EB Surveillance Data Center feeding the National Health Data Repository</td><td>EB, OHL, KMITS</td></tr>
+        <tr><td>Pillar 5 · Strong institutions</td><td>Laboratory regulatory training, national pandemic workforce inventory, joint DOH–DA governance</td><td>HFSRB, HHRDB/HEMB, BIHC</td></tr>
+        <tr><td>Pillars 1 and 2 · Communities and primary care</td><td>Community-based One Health surveillance, point-of-care testing</td><td>EB, OHL</td></tr>
+        <tr><td>Health emergency preparedness</td><td>The Bank's deck labels this "Pillar 0" and treats it as cutting across all pillars</td><td>All</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="src">ISM wrap-up deck, slide 2. The JMC anchors on AO 2026-0012.</p>
+
+  <div class="panel">
+    <h3>What RP sits beside</h3>
+    <div class="grid3 small">
+      <div><b>Health System Resilience Project (HSRP)</b><p class="muted">Broader preparedness: surveillance, laboratory networks and response at all levels.</p></div>
+      <div><b>World Bank TA (Pandemic Fund)</b><p class="muted">Surveillance protocols, AMR surveillance, laboratory workforce curriculum, costed laboratory strategic plan.</p></div>
+      <div><b>FAO TA (Pandemic Fund)</b><p class="muted">Genome sequencing and bioinformatics training, DA workforce plan, epidemiology training for DA and DENR.</p></div>
+      <div><b>PRDP Scale-Up</b><p class="muted">Agri-fishery value chains and LGU risk mitigation. RP fills animal and wildlife health gaps.</p></div>
+    </div>
+    <p class="src">Kick-off deck, slide 5</p>
+  </div>
+</section>
+
+<!-- 02 PACKAGES -->
+<section id="packages">
+  <div class="sechead">
+    <div class="row"><span class="secnum">02</span><h2>What the DOH share buys</h2><span class="basis"><span class="tag doc">Documented</span><span class="tag der">Counts derived</span></span></div>
+    <p class="muted">Fifteen recipient-executed packages and the PMO line make up the US$10.125 million. Five Bank-executed activities sit alongside. Status columns follow the Document Tracker as of 30 October 2026. The Bank input column summarizes the verbal comments given at the October mission.</p>
+  </div>
+
+  <div class="chips" role="group" aria-label="Filter packages">
+    <button class="chip" type="button" id="f-all" data-f="all" aria-pressed="true">Show all</button>
+    <button class="chip" type="button" id="f-11" data-f="c11" aria-pressed="false">1.1 Surveillance</button>
+    <button class="chip" type="button" id="f-12" data-f="c12" aria-pressed="false">1.2 Laboratory</button>
+    <button class="chip" type="button" id="f-13" data-f="c13" aria-pressed="false">1.3 Workforce</button>
+    <button class="chip" type="button" id="f-bank" data-f="bank" aria-pressed="false">Bank-executed</button>
+  </div>
+
+  <div class="tbl wide">
+    <table id="pkgtable">
+      <thead><tr><th>#</th><th>Package</th><th>Office</th><th class="r">US$</th><th>Method</th><th>Start</th><th>2nd TOR</th><th>Market scoping</th><th>Main Bank input (Oct mission)</th><th>Files</th></tr></thead>
+      <tbody>
+        <tr class="grp" data-g="c11"><td colspan="10"><span class="cdot c11"></span>1.1 Early warning and disease surveillance · US$3,400,000</td></tr>
+        <tr data-g="c11"><td class="mono">1</td><td class="pkg">DHIS2-based One Health surveillance information system<small>Managed service; PIDSR, FHSIS and BAI interoperability</small></td><td>EB-PHSD</td><td class="r">1,500,000</td><td>RFB</td><td>2027</td><td class="nw"><span class="pill idle">No date</span></td><td><span class="pill ok">Draft</span></td><td>Decide between a pilot and a national rollout; confirm hosting and integrations.</td><td class="links"><a href="https://docs.google.com/document/d/1k5R-2LJkIT8C2fdgVF31IMtrt1VBDHrimpnz0GXlXTk/edit" target="_blank" rel="noopener">TOR</a><a href="https://drive.google.com/file/d/1dnjwAYkLgz_irJ_TuBWYJQbPK_tHJ14f/view" target="_blank" rel="noopener">WB</a></td></tr>
+        <tr data-g="c11"><td class="mono">2</td><td class="pkg">EB Mini Command Center<small>Audio-visual and ICT equipment; US$25,000 planned for Q4 2026</small></td><td>EB, KMITS</td><td class="r">500,000</td><td>RFQ</td><td>2026</td><td class="nw"><span class="pill chk">"23 Sep 2028"</span></td><td><span class="pill ok">Draft</span></td><td>Adjust specifications. Spending is unlikely in 2026 and can roll to 2027.</td><td class="links"><a href="https://docs.google.com/document/d/1sNABGlEhCz3zhZwQOe54Vvo-eHtzEmEzu3hjvq9ZzTU/edit" target="_blank" rel="noopener">TOR</a><a href="https://drive.google.com/file/d/1c8TleqL2jIXldp0zoTPGSwSZNFVtYw8R/view" target="_blank" rel="noopener">WB</a></td></tr>
+        <tr data-g="c11"><td class="mono">3</td><td class="pkg">Community event-based surveillance and response (CESR)<small>Project management support; 10% mobility fund in month 1</small></td><td>EB-PHSD</td><td class="r">1,100,000</td><td>QCBS</td><td>2027</td><td class="nw">15 Oct</td><td><span class="pill ok">Draft</span></td><td>Strong strategic fit (office-level comment).</td><td class="links"><span class="pill chk">TOR not accessible</span> <a href="https://drive.google.com/file/d/1s5XYmiHA-u1HvkOgpPfJ1jNpFP5ecQa3/view" target="_blank" rel="noopener">WB</a></td></tr>
+        <tr data-g="c11"><td class="mono">4</td><td class="pkg">Joint analytics training for human and animal health</td><td>EB-AEHMD</td><td class="r">300,000</td><td>CQS</td><td>2027</td><td class="nw">23 Oct</td><td><span class="pill prog">Pending</span></td><td>Shorten the timeline to fit March 2028.</td><td class="links"><a href="https://drive.google.com/file/d/1wmHVtyJvNiGPaM4eNgHI-kTlQb7oFQwc/view" target="_blank" rel="noopener">TOR v3</a><a href="https://drive.google.com/file/d/1JrEsHwRaEicQaPbjku3Fj_2-PyeM8RsS/view" target="_blank" rel="noopener">WB</a></td></tr>
+
+        <tr class="grp" data-g="c12"><td colspan="10"><span class="cdot c12"></span>1.2 Laboratory systems · US$5,250,000</td></tr>
+        <tr data-g="c12"><td class="mono">6</td><td class="pkg">Point-of-care test pilot under the National Essential Diagnostics List<small>TOR amount ₱91,000,000</small></td><td>OHL</td><td class="r">1,500,000</td><td>CQS</td><td>2027</td><td class="nw">15 Oct</td><td><span class="pill prog">Pending</span></td><td>Narrow the pilot to a deliverable scope; confirm priority diseases.</td><td class="links"><a href="https://drive.google.com/file/d/1YnM9hmqw1z7PYlGVk8vHzoKINOCPz7FS/view" target="_blank" rel="noopener">TOR</a><a href="https://drive.google.com/file/d/1OA53B7UzXhkqlICXpfuP7vSw6fuyHjXL/view" target="_blank" rel="noopener">WB</a></td></tr>
+        <tr data-g="c12"><td class="mono">7</td><td class="pkg">NEDL advocacy, capacity building and implementation support<small>TOR amount ₱8,805,000</small></td><td>OHL</td><td class="r">150,000</td><td>CQS</td><td>2027</td><td class="nw">15 Oct</td><td><span class="pill prog">Pending</span></td><td>Add quantities.</td><td class="links"><a href="https://drive.google.com/file/d/1rNNlWOBKrdtCgEFzaXQDlkneUMFQcRpC/view" target="_blank" rel="noopener">TOR</a><a href="https://drive.google.com/file/d/1Ya8rxeKgzuJEE6LmlI6SaCduio1ZBOJI/view" target="_blank" rel="noopener">WB</a></td></tr>
+        <tr data-g="c12"><td class="mono">8</td><td class="pkg">Integrated Laboratory Information Management System (ILIMS)<small>TOR amount ₱15,000,000</small></td><td>OHL</td><td class="r">250,000</td><td>CQS</td><td>2027</td><td class="nw">15 Oct</td><td><span class="pill prog">Pending</span></td><td>Revisit sequencing with HSRP design work; complete the KMITS annex.</td><td class="links"><a href="https://docs.google.com/document/d/1zUPK41NgNh0rgd7gr66E2wZG0tzABebiZkkIarz8d24/edit" target="_blank" rel="noopener">TOR</a><a href="https://drive.google.com/file/d/1_GHZ2ZkpisRdLvrJ8bd_j1_K71vfn0v-/view" target="_blank" rel="noopener">WB</a></td></tr>
+        <tr data-g="c12"><td class="mono">9</td><td class="pkg">Competency framework for laboratory professionals (PHLS)<small>TOR amount ₱14,000,000; see section 11</small></td><td>OHL</td><td class="r">2,200,000</td><td>CQS</td><td><span class="pill chk">2028</span></td><td class="nw">15 Oct</td><td><span class="pill prog">Pending</span></td><td>No package-specific comment recorded.</td><td class="links"><a href="https://drive.google.com/file/d/1PbcA7o_tWHvoN3eOZm4CF7cqiqJ8bxOH/view" target="_blank" rel="noopener">TOR</a><a href="https://drive.google.com/file/d/1xykutLorAE6JWLAalwtYs4HzuX7HrS8T/view" target="_blank" rel="noopener">WB</a></td></tr>
+        <tr data-g="c12"><td class="mono">10</td><td class="pkg">Operational plan for the National Laboratory Strategic Plan<small>TOR amount ₱9,300,000; workshops per AWFP</small></td><td>OHL</td><td class="r">150,000</td><td>RFQ</td><td><span class="pill chk">2028</span></td><td class="nw">15 Oct</td><td><span class="pill prog">Pending</span></td><td>No package-specific comment recorded.</td><td class="links"><a href="https://drive.google.com/file/d/14lxEfxc6CahJK0hvVbmuQHowobfpH_gE/view" target="_blank" rel="noopener">Concept note</a><a href="https://drive.google.com/file/d/1ND51c-F5qRimgPmziQ547vhS7B9k_giV/view" target="_blank" rel="noopener">WB</a></td></tr>
+        <tr data-g="c12"><td class="mono">12</td><td class="pkg">OHGC organizational development (TOR A)</td><td>RITM</td><td class="r">172,414</td><td>CQS</td><td>2027</td><td class="nw">14 Oct</td><td><span class="pill ok">Draft</span></td><td rowspan="4">Show how the four RITM TORs depend on each other in one timeline; clarify who leads cross-cutting tasks.</td><td class="links"><a href="https://docs.google.com/document/d/1Kpv_qKc2onr6bOnTnDe9wGCXtlIGtPADee120eytvAU/edit" target="_blank" rel="noopener">TOR</a><a href="https://drive.google.com/file/d/1ae5hgFSQ8TlyZte67xmizLLlzCap1a4e/view" target="_blank" rel="noopener">WB</a></td></tr>
+        <tr data-g="c12"><td class="mono">13</td><td class="pkg">OHGC competency framework, curriculum and training (TOR B)</td><td>RITM</td><td class="r">137,931</td><td>CQS</td><td>2027</td><td class="nw">14 Oct</td><td><span class="pill ok">Draft</span></td><td class="links"><a href="https://drive.google.com/drive/folders/1LyLXgNrYPC5vj5E-UZtkqNpXhtsnQqn-" target="_blank" rel="noopener">Folder</a></td></tr>
+        <tr data-g="c12"><td class="mono">14</td><td class="pkg">Pilot One Health genomic surveillance, project management (TOR C)</td><td>RITM</td><td class="r">637,931</td><td>CQS</td><td>2027</td><td class="nw">16 Oct</td><td><span class="pill ok">Draft</span></td><td class="links"><a href="https://drive.google.com/drive/folders/10HynmWlnIJmUVkC162bmXYp_qbGWjRTp" target="_blank" rel="noopener">Folder</a></td></tr>
+        <tr data-g="c12"><td class="mono">16</td><td class="pkg">One Health genomic data repository (TOR D)</td><td>RITM</td><td class="r">51,724</td><td>QCBS</td><td>2027</td><td class="nw">16 Oct</td><td><span class="pill ok">Draft</span></td><td class="links"><a href="https://drive.google.com/drive/folders/1G0kRDkoroQaUClSxNP68aWbJKFJPqJDc" target="_blank" rel="noopener">Folder</a></td></tr>
+
+        <tr class="grp" data-g="c13"><td colspan="10"><span class="cdot c13"></span>1.3 Workforce capacity · US$600,000</td></tr>
+        <tr data-g="c13"><td class="mono">5</td><td class="pkg">Inventory and mapping of the multisectoral PPR workforce<small>Tracker's first TOR link opens Item 11's file</small></td><td>EB-AEHMD, IHR</td><td class="r">400,000</td><td>CQS</td><td>2027</td><td class="nw">23 Oct</td><td><span class="pill prog">Pending</span></td><td>No package-specific comment recorded.</td><td class="links"><a href="https://drive.google.com/file/d/1J39g97tHUtjpH3vOA3poSKcE-cJi1m9y/view" target="_blank" rel="noopener">TOR (Oct)</a><a href="https://drive.google.com/file/d/1c20yWRPy2skVxdxySoAmyzgjHglCCZQF/view" target="_blank" rel="noopener">WB</a></td></tr>
+        <tr data-g="c13"><td class="mono">11</td><td class="pkg">Capacity building of DOH regulatory officers and e-learning</td><td>HFSRB</td><td class="r">200,000</td><td>QCBS</td><td>2027</td><td class="nw"><span class="pill idle">No date</span></td><td><span class="pill ok">Draft</span></td><td>Specify training scale and e-learning requirements; coordinate with OHL and RITM.</td><td class="links"><a href="https://drive.google.com/file/d/1IAx-vfx5jQP1-UsxePBhdNwwEVrqLvFf/view" target="_blank" rel="noopener">TOR</a><a href="https://drive.google.com/file/d/1-2hxSIKqWkG-z7lYxA22ig-rT14bwh2f/view" target="_blank" rel="noopener">WB</a></td></tr>
+
+        <tr class="grp" data-g="c3"><td colspan="10"><span class="cdot c3"></span>3.1 DOH project management · US$875,000</td></tr>
+        <tr data-g="c3"><td class="mono">19</td><td class="pkg">PMO operations<small>Staff, ICT equipment, M&amp;E, meetings, vehicle</small></td><td>RP PMO</td><td class="r">875,000</td><td>Various</td><td>2026</td><td class="nw">n/a</td><td>n/a</td><td>Repost the FM officer and systems analyst positions.</td><td class="links">n/a</td></tr>
+
+        <tr class="grp" data-g="bank"><td colspan="10"><span class="cdot bank"></span>Bank-executed activities · US$1,950,000 (US$1,618,500 net of 17% cost recovery)</td></tr>
+        <tr data-g="bank"><td class="mono">20</td><td class="pkg">Assessment of the multisectoral One Health surveillance information system<small>Net US$581,000; to be split into framework development and DHIS2 training</small></td><td>EB</td><td class="r">700,000</td><td>World Bank</td><td>2026</td><td class="nw"><span class="pill idle">No date</span></td><td>n/a</td><td>Work started; draft surveillance assessment report circulated.</td><td class="links"><a href="https://drive.google.com/file/d/1OPHdwtPH-cmhTAmyTGf65AHOS96eyyT2/view" target="_blank" rel="noopener">TOR</a></td></tr>
+        <tr data-g="bank"><td class="mono">21</td><td class="pkg">Consultancy firm for the NLSP operational plan<small>Net US$124,500</small></td><td>OHL</td><td class="r">150,000</td><td>World Bank</td><td>2026</td><td class="nw">15 Oct</td><td>n/a</td><td rowspan="4">The Bank formats the TORs and sends the procurement setup for DOH no-objection by 11 November.</td><td class="links"><a href="https://drive.google.com/file/d/1Pig__tjygtehyIVMRiDIZnNYN9CMl2ZT/view" target="_blank" rel="noopener">TOR</a></td></tr>
+        <tr data-g="bank"><td class="mono">22</td><td class="pkg">Adoption of the laboratory competency framework<small>Net US$249,000; the tracker's resubmission link opens Item 9's TOR file</small></td><td>OHL</td><td class="r">300,000</td><td>World Bank</td><td>2026</td><td class="nw">15 Oct</td><td>n/a</td><td class="links"><a href="https://drive.google.com/file/d/1_2RarPmbenMCgKEPABi9TOb6QfFYnkBd/view" target="_blank" rel="noopener">TOR</a></td></tr>
+        <tr data-g="bank"><td class="mono">23</td><td class="pkg">Case-based AMR surveillance pilot<small>Net US$249,000; human-health AMR only</small></td><td>RITM</td><td class="r">300,000</td><td>World Bank</td><td>2026</td><td class="nw">15 Oct</td><td>n/a</td><td class="links"><a href="https://drive.google.com/file/d/1O7u_PYfoNl6TzcHdrOZ6tmtowitJVfKZ/view" target="_blank" rel="noopener">TOR</a></td></tr>
+        <tr data-g="bank"><td class="mono">24</td><td class="pkg">Multisectoral health workforce plan and surge capacity plan (Phases I–III)<small>Net US$415,000</small></td><td>HHRDB, HEMB</td><td class="r">500,000</td><td>World Bank</td><td>2026</td><td class="nw">15 Oct</td><td>n/a</td><td class="links"><a href="https://drive.google.com/file/d/1TdRKZUjLHUUI0IDOv5N-4zZwpp-BS2a8/view" target="_blank" rel="noopener">TOR</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="src">Procurement Plan and Document Tracker (Document Tracker, Procurement Plan 2027 sheets); AWFP 2027 tab; ISM wrap-up deck, slide 7; EB alignment deck, 25 Sep 2026. Item numbers follow the tracker; 15, 17 and 18 are unused. File links need access to each owner's Drive.</p>
+</section>
+
+<!-- 03 MONEY -->
+<section id="money">
+  <div class="sechead">
+    <div class="row"><span class="secnum">03</span><h2>Where the money sits</h2><span class="basis"><span class="tag doc">Documented</span><span class="tag der">Office split and shares derived</span></span></div>
+    <p class="muted">All figures cover the DOH share of US$10,125,000. Nothing has been disbursed. The figures below are plans.</p>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <h3>By subcomponent</h3>
+      <div class="stack" role="img" aria-label="DOH share by subcomponent"><span class="c1" style="width:33.58%"></span><span class="c1b" style="width:51.85%"></span><span class="c1c" style="width:5.93%"></span><span class="c3" style="width:8.64%"></span></div>
+      <div class="stackkey">
+        <div><span class="sw" style="background:var(--c1)"></span><b>US$3.40M · 34%</b><small>1.1 Surveillance</small></div>
+        <div><span class="sw" style="background:var(--c1b)"></span><b>US$5.25M · 52%</b><small>1.2 Laboratory</small></div>
+        <div><span class="sw" style="background:var(--c1c)"></span><b>US$0.60M · 6%</b><small>1.3 Workforce</small></div>
+        <div><span class="sw c3"></span><b>US$0.875M · 9%</b><small>3.1 Project management</small></div>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>By office <span class="tag der">Derived</span></h3>
+      <div class="stack" role="img" aria-label="DOH share by office"><span class="c1" style="width:37.53%"></span><span class="c1b" style="width:41.98%"></span><span class="ritm" style="width:9.88%"></span><span class="c1c" style="width:1.98%"></span><span class="c3" style="width:8.64%"></span></div>
+      <div class="stackkey">
+        <div><span class="sw" style="background:var(--c1)"></span><b>US$3.80M · EB</b><small>Items 1–5</small></div>
+        <div><span class="sw" style="background:var(--c1b)"></span><b>US$4.25M · OHL</b><small>Items 6–10</small></div>
+        <div><span class="sw ritm"></span><b>US$1.00M · RITM</b><small>Items 12, 13, 14, 16</small></div>
+        <div><span class="sw" style="background:var(--c1c)"></span><b>US$0.20M · HFSRB</b><small>Item 11</small></div>
+        <div><span class="sw c3"></span><b>US$0.875M · PMO</b><small>Item 19</small></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Programmed by year</h3>
+    <div class="stack" role="img" aria-label="DOH share programmed by year"><span class="c3" style="width:1.04%"></span><span class="c1" style="width:78.22%"></span><span class="idle" style="width:20.74%"></span></div>
+    <div class="stackkey">
+      <div><span class="sw c3"></span><b>US$104,802 · 2026</b><small>PMO start-up US$79,802 plus Mini Command Center US$25,000 (2026 tab)</small></div>
+      <div><span class="sw c1"></span><b>US$7,919,395 · 2027</b><small>78% of the DOH share; 80% of each package by rule</small></div>
+      <div><span class="sw" style="background:var(--idle-soft);border:1px solid var(--rule-strong)"></span><b>US$2,100,803 · not yet programmed</b><small>The 2028 tab is marked "for later". The reconciliation sheet shows US$2,125,803; see section 11.</small></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>2027 by quarter: obligations and disbursements</h3>
+    <div class="legend"><span class="key"><span class="sw" style="background:var(--c1c)"></span>Obligation forecast</span><span class="key"><span class="sw c1"></span>Disbursement forecast</span></div>
+    <div class="qchart" role="img" aria-label="2027 quarterly forecast in US$ millions. Obligations: Q1 1.48, Q2 1.45, Q3 2.01, Q4 2.85. Disbursements: Q1 1.58, Q2 1.48, Q3 1.91, Q4 2.95.">
+      <div class="qaxis"><span style="bottom:0%">0</span><span style="bottom:33.33%">1M</span><span style="bottom:66.67%">2M</span><span style="bottom:100%">3M</span></div>
+      <div class="qplot">
+        <div class="qgrid" style="bottom:33.33%"></div><div class="qgrid" style="bottom:66.67%"></div><div class="qgrid" style="bottom:100%"></div>
+        <div class="qgroup"><div class="qbar o" style="height:49.33%"><em>1.48</em></div><div class="qbar d" style="height:52.58%"><em>1.58</em></div></div>
+        <div class="qgroup"><div class="qbar o" style="height:48.30%"><em>1.45</em></div><div class="qbar d" style="height:49.30%"><em>1.48</em></div></div>
+        <div class="qgroup"><div class="qbar o" style="height:67.02%"><em>2.01</em></div><div class="qbar d" style="height:63.68%"><em>1.91</em></div></div>
+        <div class="qgroup"><div class="qbar o" style="height:95.08%"><em>2.85</em></div><div class="qbar d" style="height:98.42%"><em>2.95</em></div></div>
+      </div>
+      <div class="qlabels"><span>Q1 2027</span><span>Q2 2027</span><span>Q3 2027</span><span>Q4 2027</span></div>
+    </div>
+    <p class="small">The plan obligates every package on one formula: 15% in Q1, 15% in Q2, 20% in Q3 and 30% in Q4, for 80% in the first year. The remaining 20% falls in the second year. The 2027 totals are US$7,791,895 in obligations and US$7,919,395 in disbursements.</p>
+    <p class="small muted">The World Bank accepts an 80% expenditure forecast and allows recalibration later. A 12-month cash forecast must accompany the plan.</p>
+    <p class="src">AWFP 2027 tab and General Guide; ISM wrap-up minutes</p>
+  </div>
+</section>
+
+<!-- 04 WINDOWS -->
+<section id="windows">
+  <div class="sechead">
+    <div class="row"><span class="secnum">04</span><h2>Decision windows: what closes when</h2><span class="basis"><span class="tag doc">Documented</span></span></div>
+    <p class="muted">Dates come from the agreed actions at the October mission and the writeshop planning meeting. A filled red marker shows a date fixed by the Grant Agreement or by an external body.</p>
+  </div>
+  <div class="windows">
+    <div class="win past"><div class="when">30–31 Oct 2026<small>PASSED</small></div><ul><li>2027 AWPB and 12-month cash forecast due to the World Bank (DOH PMO, DA-BAI).</li><li>The folder holds the 2027 AWFP marked for Bank submission as of 30 October.</li></ul></div>
+    <div class="win hard"><div class="when">4 Nov 2026<small>DBM · WORLD BANK</small></div><ul><li>DBM deadline for the SARUDA request. An exemption may be needed given grant status.</li><li>Agree how to regularize the 2026 AWFP (DOH PMO, Bank FM).</li><li>FM, Client Connection and FundsChain training (World Bank, PMOs).</li></ul></div>
+    <div class="win"><div class="when">4–6 Nov 2026<small>WRITESHOP · CLARK</small></div><ul><li>About 30 participants from BIHC, EB, HEMB, HFSRB, HHRDB, OHL, KMITS, RITM and selected regional offices.</li><li>Outputs: revised high-level work plan, harmonized TORs, revised procurement plan, market scoping orientation.</li><li>The Bank's no-objection will depend on evidence of cross-office coordination. Directors are asked to attend for final decisions.</li></ul></div>
+    <div class="win hard"><div class="when">11 Nov 2026<small>WORLD BANK</small></div><ul><li>The Bank sends formatted BETF TORs and the procurement setup for DOH no-objection.</li></ul></div>
+    <div class="win"><div class="when">November 2026<small>DOH · DA</small></div><ul><li>JMC signed by both Secretaries.</li><li>Core PMO hiring completed (DOH, DA-BAI).</li><li>DA designates its Project Director and Deputy.</li><li>Monthly Directors' coordination meetings begin.</li><li>End of November: preferred deadline for the final procurement plan.</li></ul></div>
+    <div class="win"><div class="when">Late Nov to early Dec 2026<small>PMO</small></div><ul><li>First Project Steering Committee. It depends on naming Undersecretary-level leads at DOH and DA first.</li></ul></div>
+    <div class="win"><div class="when">Dec 2026 to Jan 2027<small>DOH · DA</small></div><ul><li>Procurement initiation expected. Advance procurement is already permitted because the project is effective.</li></ul></div>
+    <div class="win"><div class="when">Early 2027<small>PMO · FAO</small></div><ul><li>Project launch, ceremonial JMC signing and first NPSC meeting. The date is still to be set with both Secretaries.</li></ul></div>
+    <div class="win"><div class="when">Jun to Oct 2027<small>ESTIMATES</small></div><ul><li>June 2027: realistic consultancy start if procurement takes six months from January.</li><li>September to October 2027: when the Bank expects firms to start.</li></ul></div>
+    <div class="win hard"><div class="when">31 Dec 2027<small>JMC</small></div><ul><li>Deadline for a DOH–DA–DENR Joint Administrative Order creating a permanent One Health Governance Committee. The JMC's interim framework stays in force if the JAO is late.</li></ul></div>
+    <div class="win hard"><div class="when">31 Mar 2028<small>GRANT AGREEMENT</small></div><ul><li>Project closing. A one-year extension needs Pandemic Fund Secretariat agreement and World Bank country management approval.</li></ul></div>
+  </div>
+  <p class="src">ISM wrap-up deck, slide 10 and minutes; writeshop coordination minutes, 30 Oct 2026; launch concept note; JMC v4</p>
+</section>
+
+<!-- 05 READINESS -->
+<section id="readiness">
+  <div class="sechead">
+    <div class="row"><span class="secnum">05</span><h2>Readiness: six steps to the first release of funds</h2><span class="basis"><span class="tag doc">Documented</span></span></div>
+    <p class="muted">The World Bank listed these steps between readiness and the first release of funds at the October wrap-up. None is complete for DOH.</p>
+  </div>
+  <div class="steps">
+    <div class="step"><span class="n">STEP 1</span><h4>JMC signed</h4><span class="pill prog">In progress</span><p>Bank no-objection issued. Final DOH and DA clearance before both Secretaries sign.</p></div>
+    <div class="step"><span class="n">STEP 2</span><h4>Signatories endorsed</h4><span class="pill prog">Pending</span><p>The DPO needs the new Project Director and Deputy. A new specimen-signature sheet then goes to DOF.</p></div>
+    <div class="step"><span class="n">STEP 3</span><h4>Account details completed</h4><span class="pill prog">In progress</span><p>MDS account opened at Land Bank. BTr Form 3 is notarized once Land Bank releases the account number.</p></div>
+    <div class="step"><span class="n">STEP 4</span><h4>AWPB cleared</h4><span class="pill prog">In progress</span><p>2026 plan transmitted; no-objection expected. 2027 plan due 31 October.</p></div>
+    <div class="step"><span class="n">STEP 5</span><h4>First withdrawal application</h4><span class="pill idle">Not started</span><p>DOF has not yet endorsed the DOH authorized signatory letter to the Bank.</p></div>
+    <div class="step"><span class="n">STEP 6</span><h4>Procurement launched</h4><span class="pill idle">Not started</span><p>Expected December 2026 to January 2027.</p></div>
+  </div>
+
+  <div class="tbl mid">
+    <table>
+      <thead><tr><th>Area</th><th>DOH</th><th>DA-BAI</th></tr></thead>
+      <tbody>
+        <tr><td>JMC</td><td><span class="pill prog">In progress</span> Bank no-objection issued; in final DOH clearance</td><td><span class="pill prog">In progress</span> Co-signatory; needs final clearance</td></tr>
+        <tr><td>Designated account</td><td><span class="pill ok">Opened</span> MDS account at Land Bank; BTr Form 3 signed by the Secretary</td><td><span class="pill ok">Opened</span> US-dollar account (24 Aug 2026)</td></tr>
+        <tr><td>Signatory letters</td><td><span class="pill prog">Pending</span> New request to DOF</td><td><span class="pill prog">In progress</span> Almost endorsed</td></tr>
+        <tr><td>Governance</td><td><span class="pill prog">In progress</span> Structure set through a DPO; interim PMO under BIHC</td><td><span class="pill ok">Done</span> Project team, technical committees and special BAC</td></tr>
+        <tr><td>Planning</td><td><span class="pill prog">In progress</span> RETF and BETF TORs and procurement inputs in early draft</td><td><span class="pill ok">Done</span> Readiness plan adopted; procurement training done; items in STEP</td></tr>
+        <tr><td>Staffing</td><td><span class="pill prog">In progress</span> Interviews done for team lead, procurement, E&amp;S and M&amp;E</td><td><span class="pill idle">Planned</span> Recruitment being planned</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="src">ISM wrap-up deck, slides 5 and 6</p>
+</section>
+
+<!-- 06 PROGRESS -->
+<section id="progress">
+  <div class="sechead">
+    <div class="row"><span class="secnum">06</span><h2>Progress: what has actually moved</h2><span class="basis"><span class="tag doc">Documented</span><span class="tag der">Counts derived from the tracker</span></span></div>
+  </div>
+  <div class="figs three">
+    <div class="fig alert"><div class="v num">US$0</div><div class="k">Disbursed. No withdrawal application yet.</div><div class="s">ISM minutes</div></div>
+    <div class="fig"><div class="v num">15/15</div><div class="k">RETF TORs and procurement plan inputs submitted</div><div class="s">ISM deck</div></div>
+    <div class="fig"><div class="v num">5/5</div><div class="k">BETF TORs submitted</div><div class="s">ISM deck</div></div>
+    <div class="fig"><div class="v num">13/15</div><div class="k">RETF TORs with a resubmission date in the tracker</div><div class="s">Tracker · derived</div></div>
+    <div class="fig"><div class="v num">12/15</div><div class="k">RETF packages with written Bank comments on file</div><div class="s">Tracker · derived</div></div>
+    <div class="fig"><div class="v num">8/15</div><div class="k">Market scoping drafts available. All five OHL packages are pending.</div><div class="s">Tracker · derived</div></div>
+  </div>
+  <div class="grid2">
+    <div class="panel">
+      <h3>Moved</h3>
+      <ul class="plain small">
+        <li>The Grant Agreement became effective on 7 July 2026.</li>
+        <li>The World Bank issued its no-objection on the JMC.</li>
+        <li>DOH opened its MDS account at Land Bank.</li>
+        <li>An interim PMO operates under BIHC and EB. Weekly DOH–DA–World Bank–FAO coordination meetings run.</li>
+        <li>The procurement strategy, procurement plan and project operations manual are complete.</li>
+        <li>The Bank-executed surveillance assessment has started. A draft report has gone to partners.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Not yet moved</h3>
+      <ul class="plain small">
+        <li>No funds have reached DOH. DOF has not endorsed the DOH authorized signatory letter.</li>
+        <li>The FM specialist post will be reposted with lower qualifications (no CPA) and a higher salary grade.</li>
+        <li>The systems analyst post will be reposted.</li>
+        <li>No Undersecretary-level lead for cross-agency coordination has been named at DOH or DA.</li>
+        <li>No procurement has been launched.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="src">Kick-off deck, slide 6; ISM wrap-up deck and minutes; EB alignment deck; Document Tracker</p>
+</section>
+
+<!-- 07 SQUEEZE -->
+<section id="squeeze">
+  <div class="sechead">
+    <div class="row"><span class="secnum">07</span><h2>The time squeeze</h2><span class="basis"><span class="tag doc">Documented</span><span class="tag der">Bar positions derived</span></span></div>
+    <p class="muted">The activities were planned for 36 months. The grant runs for less than 21 months from effectiveness. Contracts that start mid-2027 leave about nine months for delivery.</p>
+  </div>
+  <div class="panel">
+    <div class="tlwrap">
+      <div class="tlbody">
+        <div class="tlrow"><div class="lab">Original activity plan<small>36 months, April 2026 to March 2029</small></div><div class="track"><i class="design" style="left:0%;width:100%"></i></div></div>
+        <div class="tlrow"><div class="lab">Grant in force<small>7 Jul 2026 to 31 Mar 2028</small></div><div class="track"><i class="grant" style="left:8.33%;width:58.33%"></i></div></div>
+        <div class="tlrow"><div class="lab">Procurement lead time<small>About 6 months from January 2027</small></div><div class="track"><i class="proc" style="left:25%;width:16.67%"></i></div></div>
+        <div class="tlrow"><div class="lab">Delivery after procurement<small>About 9 months, July 2027 to March 2028</small></div><div class="track"><i class="deliv" style="left:41.67%;width:25%"></i></div></div>
+        <div class="tlrow"><div class="lab">Bank's view of firm start<small>September to October 2027</small></div><div class="track"><i class="wb" style="left:47.22%;width:19.44%"></i></div></div>
+      </div>
+      <div class="tlaxisrow"><div></div><div class="tlaxis"><span style="left:0%">Apr 2026</span><span style="left:25%">Jan 2027</span><span style="left:58.33%">Jan 2028</span><span style="left:100%">Mar 2029</span></div></div>
+    </div>
+    <p class="small muted">Today marks 1 November 2026, month 8 of the original plan. Closing falls at the end of month 24.</p>
+  </div>
+  <div class="grid2">
+    <div class="panel">
+      <h3>What the documents say</h3>
+      <ul class="plain small">
+        <li>The original Gantt assumed the RETF would trigger in April 2026. It did not account for procurement time.</li>
+        <li>Many TORs were written for 36 months and must now close by March 2028.</li>
+        <li>The writeshop will move TORs from monthly payments to deliverable-based tranches. Each TOR gains a mini work plan annex.</li>
+        <li>The Bank advises DOH and DA to begin building the case for a one-year extension. The writeshop guidance says not to rely on one.</li>
+      </ul>
+      <p class="src">AWFP RP-Gantt Chart sheet; writeshop coordination minutes; ISM minutes</p>
+    </div>
+    <div class="panel">
+      <h3>Lines still dated past the window <span class="tag tbc">To confirm</span></h3>
+      <ul class="plain small">
+        <li>Item 9, laboratory competency framework (US$2.2M): planned start 1 January 2028.</li>
+        <li>Item 10, NLSP operational plan (US$150,000): planned start 1 January 2028.</li>
+        <li>The PMO staffing plan is costed to March 2029.</li>
+        <li>The 2027 work plan still programs 80% of Items 9 and 10 in 2027. The plans disagree on timing.</li>
+      </ul>
+      <p class="src">Document Tracker; Procurement Plan 2027 and 2028 sheets; PMO Staffing sheet</p>
+    </div>
+  </div>
+</section>
+
+<!-- 08 RESULTS -->
+<section id="results">
+  <div class="sechead">
+    <div class="row"><span class="secnum">08</span><h2>Results the project must show by March 2028</h2><span class="basis"><span class="tag doc">Documented</span></span></div>
+    <p class="muted">The JMC adopts the results framework. Baselines are set at July 2026.</p>
+  </div>
+  <div class="tbl mid">
+    <table>
+      <thead><tr><th>Level</th><th>Indicator</th><th class="r">Jul 2026</th><th class="r">Mar 2028</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td colspan="4">Project Development Objective indicators</td></tr>
+        <tr><td>Detect</td><td>LGUs with an operational harmonized surveillance system for human and animal health</td><td class="r">0</td><td class="r">20</td></tr>
+        <tr><td>Report</td><td>National and regional laboratories upgraded and equipped</td><td class="r">0</td><td class="r">3</td></tr>
+        <tr><td>Respond</td><td>Persons equipped with One Health knowledge and skills</td><td class="r">0</td><td class="r">200</td></tr>
+        <tr class="grp"><td colspan="4"><span class="cdot c11"></span>Component 1 · Human health</td></tr>
+        <tr><td>IRI</td><td>National command center for disease surveillance and response strengthened</td><td class="r">No</td><td class="r">Yes</td></tr>
+        <tr><td>IRI</td><td>National Strategic Plan for the Philippine Health Laboratory System costed, developed and approved</td><td class="r">No</td><td class="r">Yes</td></tr>
+        <tr><td>IRI</td><td>National Essential Diagnostics List for the PHLS developed</td><td class="r">No</td><td class="r">Yes</td></tr>
+        <tr><td>IRI</td><td>Personnel trained in the regulation of laboratories</td><td class="r">0</td><td class="r">100</td></tr>
+        <tr class="grp"><td colspan="4"><span class="cdot c2"></span>Component 2 · Animal health</td></tr>
+        <tr><td>IRI</td><td>Animal health command center strengthened</td><td class="r">No</td><td class="r">Yes</td></tr>
+        <tr><td>IRI</td><td>Laboratory management information system for animal health developed</td><td class="r">No</td><td class="r">Yes</td></tr>
+        <tr><td>IRI</td><td>Animal disease diagnostic reference laboratory integrated in the One Health genomics consortium</td><td class="r">No</td><td class="r">Yes</td></tr>
+        <tr><td>IRI</td><td>Regions piloting a collaborative One Health disease surveillance, prevention and control system</td><td class="r">0</td><td class="r">2</td></tr>
+        <tr class="grp"><td colspan="4"><span class="cdot c3"></span>Component 3 · Project management, M&amp;E</td></tr>
+        <tr><td>IRI</td><td>Project Steering Committee established and functioning</td><td class="r">No</td><td class="r">Yes</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="panel">
+    <h3>How results are reported</h3>
+    <ul class="plain small">
+      <li>Each PMO keeps a monthly dashboard of burn rates, STEP procurement and activity progress.</li>
+      <li>DOH and DA each furnish a semestral report to the Bank within 45 days after each calendar semester.</li>
+      <li>The Joint PMO convenes an annual implementation review to recalibrate the AWFP.</li>
+      <li>A component more than 15% behind schedule triggers a catch-up plan to the Bank within 14 days. DOH owns catch-up plans for Parts 1 and 3.1.</li>
+    </ul>
+    <p class="src">JMC v4, Annex 2</p>
+  </div>
+</section>
+
+<!-- 09 PEOPLE -->
+<section id="people">
+  <div class="sechead">
+    <div class="row"><span class="secnum">09</span><h2>People and governance</h2><span class="basis"><span class="tag doc">Documented</span><span class="tag tbc">Designations to confirm</span></span></div>
+  </div>
+  <div class="tbl mid">
+    <table>
+      <thead><tr><th>Body</th><th>Composition</th><th>Meets</th><th>Role</th></tr></thead>
+      <tbody>
+        <tr><td>National Project Steering Committee (NPSC-RP)</td><td>Co-chairs: Secretaries of Health and Agriculture. Members: DOF, DEPDev, DBM. Non-voting partners: DENR, DOST.</td><td class="nw">Every 6 months</td><td>Strategic direction; approves the POM, AWFP and material revisions before Bank submission</td></tr>
+        <tr><td>Joint PMO</td><td>DOH PMO and DA-BAI PMO working as one secretariat. No new office or plantilla.</td><td class="nw">Quarterly</td><td>Synchronizes activities; monitors use of the US$18,846,201 grant</td></tr>
+        <tr><td>One Health TWG</td><td>DOH, DA, DENR, DOST and pilot LGUs, with sub-TWGs on surveillance, laboratory systems and workforce</td><td class="nw">Quarterly</td><td>Develops and reviews TORs, specifications and SOPs</td></tr>
+        <tr><td>Directors' coordination meeting</td><td>DOH and DA directors</td><td class="nw">Monthly, from Nov 2026</td><td>Tracks cross-office actions agreed at the writeshop</td></tr>
+        <tr><td>DOH project management</td><td>Project Director and Deputy at Undersecretary or Assistant Secretary rank. Project Manager: the Director of EB (DOH) and of BAI (DA).</td><td class="nw">As needed</td><td>Day-to-day execution and PMO management</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="src">JMC v4, Annex 3 and Table 2; ISM wrap-up deck</p>
+
+  <div class="tbl mid">
+    <table>
+      <thead><tr><th>DOH role</th><th>DPO 2026-1557 (6 Feb 2026)</th><th>Latest draft DPO (EB deck, 25 Sep 2026)</th></tr></thead>
+      <tbody>
+        <tr><td>NPSC chair</td><td>Secretary Herbosa</td><td>Secretary Herbosa <span class="pill chk">Outdated</span></td></tr>
+        <tr><td>Project Director</td><td>Undersecretary Balboa</td><td>Undersecretary Balboa</td></tr>
+        <tr><td>Deputy Project Director</td><td>Assistant Secretary Saquilabon</td><td>Assistant Secretary Manatad</td></tr>
+        <tr><td>Project Manager</td><td>Director Manatad (EB)</td><td>Director De Guzman (EB)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout">The JMC and the launch concept note name Secretary Mercado. The Bank's wrap-up says the DPO must be updated with a new Project Director and Deputy before DOF can process signatories. Confirm the current designations before quoting any name.</div>
+
+  <div class="tbl mid">
+    <table>
+      <thead><tr><th>PMO post</th><th class="r">SG</th><th class="r">Posts</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>Project Manager II, team leader (Director II level)</td><td class="r">26</td><td class="r">1</td><td>Interviewed</td></tr>
+        <tr><td>Project Officer II, deputy team lead for policy and planning</td><td class="r">24</td><td class="r">1</td><td></td></tr>
+        <tr><td>Project Officer II, deputy team lead for M&amp;E and results</td><td class="r">24</td><td class="r">1</td><td></td></tr>
+        <tr><td>Project Officer I, supervising health program officer</td><td class="r">22</td><td class="r">2</td><td></td></tr>
+        <tr><td>Senior Project Assistant (health program officer)</td><td class="r">18</td><td class="r">3</td><td></td></tr>
+        <tr><td>Senior Project Assistant (IT officer)</td><td class="r">18</td><td class="r">1</td><td></td></tr>
+        <tr><td>Senior Project Assistant (administrative officer)</td><td class="r">18</td><td class="r">1</td><td></td></tr>
+        <tr><td>Project Aide (driver)</td><td class="r">8</td><td class="r">1</td><td>Proposed only</td></tr>
+        <tr class="subtotal"><td>Total</td><td></td><td class="r">11</td><td>₱32.70M costed April 2026 to March 2029, with a 20% premium</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small muted">The Bank names the critical hires by function: team lead, procurement specialist, FM officer, and E&amp;S and policy specialist. The 2026 work plan targets eight core positions.</p>
+  <p class="src">AWFP and tracker PMO Staffing sheets; 2026 AWFP tab; EB alignment deck; ISM wrap-up deck</p>
+</section>
+
+<!-- 10 RULES -->
+<section id="rules">
+  <div class="sechead">
+    <div class="row"><span class="secnum">10</span><h2>What is fixed, what can move</h2><span class="basis"><span class="tag doc">Documented</span><span class="tag der">Tiering derived</span></span></div>
+    <p class="muted">The tiers group provisions the documents state. They do not assess whether any change is advisable.</p>
+  </div>
+  <div class="tiers">
+    <div class="tier t1">
+      <h3>Fixed</h3>
+      <ul class="plain small">
+        <li>Statutes: RA 11332, RA 11223 and RA 12009 (New Government Procurement Act).</li>
+        <li>The Grant Agreement, World Bank Procurement Regulations and the ESCP.</li>
+        <li>The grant amount and the results indicators.</li>
+        <li>The closing date. It moves only through a one-year extension.</li>
+      </ul>
+      <p class="src">JMC v4, hierarchy of documents</p>
+    </div>
+    <div class="tier t2">
+      <h3>Needs World Bank no-objection</h3>
+      <ul class="plain small">
+        <li>Any update to the POM or the AWFP.</li>
+        <li>RETF TORs and the procurement plan in STEP.</li>
+        <li>PMO TOR changes, such as the FM specialist post.</li>
+        <li>The JMC itself (issued).</li>
+      </ul>
+      <p class="src">JMC v4; ISM minutes</p>
+    </div>
+    <div class="tier t3">
+      <h3>Within DOH and DA</h3>
+      <ul class="plain small">
+        <li>Sequencing and grouping of consultancies.</li>
+        <li>TOR scope and timelines within each allocation.</li>
+        <li>Payment tranching and work plan annexes.</li>
+        <li>NPSC approval of the AWFP before Bank submission.</li>
+      </ul>
+      <p class="src">Writeshop minutes; JMC v4</p>
+    </div>
+  </div>
+  <div class="panel">
+    <h3>The extension path, as currently understood</h3>
+    <ol class="plain small" style="padding-left:1.2em">
+      <li>World Bank, DOH and DA show progress: PMO staffed, disbursements under way, procurement launched, work plan on track.</li>
+      <li>They submit a joint extension proposal to the Pandemic Fund Secretariat.</li>
+      <li>Once the Secretariat agrees, DOF, DOH and DA coordinate a Government request to the Bank.</li>
+      <li>DEPDev endorses the request.</li>
+      <li>World Bank country management approves it.</li>
+    </ol>
+    <p class="small muted">The Bank notes that steps and timing are still to be confirmed with the Secretariat and DEPDev.</p>
+    <p class="src">ISM wrap-up deck, slide 11; ISM minutes</p>
+  </div>
+</section>
+
+<!-- 11 CHECK -->
+<section id="check">
+  <div class="sechead">
+    <div class="row"><span class="secnum">11</span><h2>Check before quoting</h2><span class="basis"><span class="tag tbc">To confirm</span></span></div>
+    <p class="muted">These figures differ between documents in the folder. Quote neither value until the owner confirms it.</p>
+  </div>
+  <h3>Numbers that do not match</h3>
+  <div class="tbl wide">
+    <table>
+      <thead><tr><th>Item</th><th>One source says</th><th>Another source says</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>Grant size</td><td>US$25M (DPO 2026-1557; launch concept note)</td><td>US$18.85M (kick-off deck); US$18,846,201 (JMC)</td><td>Both hold. The smaller figure is the recipient-executed part.</td></tr>
+        <tr><td>Recipient-executed amount</td><td>"USD 19 million" (launch concept note)</td><td>US$18,846,201 (JMC)</td><td>Rounding. Quote the JMC figure.</td></tr>
+        <tr><td>Number of RETF TORs</td><td>15 (ISM wrap-up; tracker; AWFP)</td><td>16: 5 EB, 10 laboratory, 1 HRH (writeshop minutes)</td><td>The tracker lists 9 laboratory packages, not 10.</td></tr>
+        <tr><td>Item 9, competency framework</td><td>US$2,200,000 (AWFP 2027; tracker)</td><td>US$1,900,000 (Procurement Plan 2027); US$1,200,000 (two-year plan; TOR Tracker); ₱14,000,000 TOR amount</td><td>₱14M is about US$0.23M at the ₱60 per US$ implied by other OHL lines. BETF Item 22 adds US$300,000. Its resubmission link opens the same file as Item 9's.</td></tr>
+        <tr><td>NLSP operational plan</td><td>RETF Item 10: "consultancy firm", US$150,000, RFQ; AWFP calls it lease of venues</td><td>BETF Item 21: "consultancy firm managed services", US$150,000</td><td>Confirm which fund pays the firm and which pays the workshops.</td></tr>
+        <tr><td>2026 programming</td><td>US$79,802.18 (reconciliation sheet)</td><td>US$104,802.18 (2026 tab, with the Mini Command Center's US$25,000)</td><td>The unprogrammed balance becomes US$2,100,802.84, not US$2,125,802.84.</td></tr>
+        <tr><td>Reconciliation component lines</td><td>Sum to US$8,811,697</td><td>Annual totals sum to US$7,999,197</td><td>Gap of US$812,500. Line 1.2 shows US$5,115,000 against a 2027 forecast of US$4,327,500.</td></tr>
+        <tr><td>NLSP, Q1 2027</td><td>Obligation US$22,500</td><td>Disbursement US$150,000</td><td>Disbursement precedes obligation. 2027 disbursements exceed obligations by US$127,500.</td></tr>
+        <tr><td>Mini Command Center component</td><td>"Component 1.3: Laboratory" (2026 tab)</td><td>Component 1.1 Surveillance (2027 tab; reconciliation)</td><td>Labelling error.</td></tr>
+        <tr><td>Mini Command Center resubmission date</td><td>"September 23, 2028" (tracker)</td><td>Other resubmissions fall on 14 to 23 October 2026</td><td>Likely a typing error for 2026.</td></tr>
+        <tr><td>2027 tab heading</td><td>"AWFP for 2026, as of September 9, 2026"</td><td>File title: AWFP 2027, as of 30 October 2026</td><td>Heading not updated.</td></tr>
+        <tr><td>Pilot regions</td><td>Regions VI and XII (JMC; Gantt; launch participants from CHD 6 and 12)</td><td>Regions III and XII (2026 AWFP, M&amp;E field visits)</td><td>DA's regional laboratories are in Regions VII and XII.</td></tr>
+        <tr><td>PMO size</td><td>8 core positions (2026 AWFP)</td><td>11 posts, one proposed only (PMO Staffing sheet)</td><td>The staffing sheet runs a year past closing.</td></tr>
+        <tr><td>Item 5 TOR link</td><td>Column H opens HFSRB's signed TOR (Item 11)</td><td>Column L opens the HR inventory TOR (20 Oct 2026)</td><td>Tracker correction pending.</td></tr>
+        <tr><td>AWPB due date</td><td>31 October (ISM minutes)</td><td>30 October (EB alignment deck)</td><td>Minor.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Still to confirm, and with whom</h3>
+  <div class="tbl wide">
+    <table>
+      <thead><tr><th>Question</th><th>Why it matters</th><th>Ask</th></tr></thead>
+      <tbody>
+        <tr><td>Who are the current DOH Project Director and Deputy?</td><td>The DOF signatory sheet waits on the updated DPO.</td><td>OSEC; BIHC; DOH PMO</td></tr>
+        <tr><td>Which Undersecretaries lead cross-agency coordination at DOH and DA?</td><td>The first Steering Committee depends on it.</td><td>OSEC; DA</td></tr>
+        <tr><td>Was the 2027 AWFP transmitted, and how will the 2026 AWFP be regularized?</td><td>AWPB clearance is a step before the first release of funds.</td><td>DOH PMO; Bank FM</td></tr>
+        <tr><td>Does the SARUDA request need an exemption?</td><td>The DBM deadline is 4 November.</td><td>FMS; BIHC</td></tr>
+        <tr><td>Is DHIS2 a pilot or a national rollout, and where is it hosted?</td><td>It sets the scope of the largest surveillance package (US$1.5M, RFB).</td><td>EB; KMITS</td></tr>
+        <tr><td>How does ILIMS sequence with HSRP design work?</td><td>It avoids two designs for one system.</td><td>OHL; KMITS</td></tr>
+        <tr><td>What is the competency framework's budget, and how is it split between RETF and BETF?</td><td>It is the largest single DOH package.</td><td>OHL; DOH PMO</td></tr>
+        <tr><td>Can Items 9 and 10 still start and finish before 31 March 2028?</td><td>Both are dated to start in January 2028.</td><td>OHL; DOH PMO</td></tr>
+        <tr><td>Where is the CESR TOR (Item 3)?</td><td>Neither linked version opens from the compiling account.</td><td>EB-PHSD</td></tr>
+        <tr><td>What does FAO finance, and for how much?</td><td>About US$4.2M of the US$25M is not itemized in the folder.</td><td>FAO; DOH PMO</td></tr>
+        <tr><td>Which ESCP actions fell due 30 and 90 days after effectiveness, and are they met?</td><td>Counted from 7 July 2026, those dates were 6 August and 5 October 2026.</td><td>DOH PMO (E&amp;S)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 12 SOURCES -->
+<section id="sources">
+  <div class="sechead">
+    <div class="row"><span class="secnum">12</span><h2>Sources</h2><span class="basis"><span class="tag doc">Project folder</span></span></div>
+    <p class="muted">Links open the owner's file in Google Drive. Access depends on each file's sharing settings.</p>
+  </div>
+  <div class="tbl mid">
+    <table>
+      <thead><tr><th>Document</th><th>Date</th><th>Used for</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://docs.google.com/spreadsheets/d/1Rq6y1PpLVG4Nq0l8wWMtWvyN7Z9zkDaiQp6wyZ94JrM/edit" target="_blank" rel="noopener">AWFP 2027 (WB submission)</a></td><td class="nw">30 Oct 2026</td><td>Budgets, quarterly forecasts, reconciliation, Gantt, obligation rule</td></tr>
+        <tr><td><a href="https://docs.google.com/spreadsheets/d/1VovyhZfNPX1I7LrWEgCbV63xuonEnuErZwzGNu1J8Cw/edit" target="_blank" rel="noopener">C. Procurement Plan and Document Tracker</a></td><td class="nw">30 Oct 2026</td><td>Packages, methods, TOR and market scoping status, BETF lines, PMO staffing</td></tr>
+        <tr><td><a href="https://docs.google.com/document/d/1T99E0F1X84O2d4KSZ6N4nT6_6GjNAXvWIDoaOm3Tj9c/edit" target="_blank" rel="noopener">Joint Memorandum Circular, version 4</a></td><td class="nw">28 Oct 2026</td><td>Governance, scope, closing date, results framework, document hierarchy</td></tr>
+        <tr><td><a href="https://drive.google.com/file/d/1jl-gKr7V7mobEdmDms9_Dt4tdARwQCYP/view" target="_blank" rel="noopener">Kick-off deck, first ISM</a></td><td class="nw">26 Oct 2026</td><td>Milestones, components, targets, complementary investments</td></tr>
+        <tr><td><a href="https://drive.google.com/file/d/1T9ZzNCuKGdHX-W-ec0xIXRVEUbYuT3Jt/view" target="_blank" rel="noopener">Wrap-up deck, first ISM</a></td><td class="nw">29 Oct 2026</td><td>Readiness, Bank inputs by office, agreed actions, extension path</td></tr>
+        <tr><td><a href="https://docs.google.com/document/d/1OXNtZB9GequQ26qJRRudWxQIpKKCbW2h9mDMFuABQbQ/edit" target="_blank" rel="noopener">Minutes: ISM wrap-up</a></td><td class="nw">29 Oct 2026</td><td>Pending issues, writeshop scope, FM status, extension advice</td></tr>
+        <tr><td><a href="https://docs.google.com/document/d/1CCMHlN4x39doPngZsgN31qO210droPJkn3neZYs-XN8/edit" target="_blank" rel="noopener">Minutes: writeshop coordination meeting</a></td><td class="nw">30 Oct 2026</td><td>Timeline compression, TOR fixes, writeshop programme</td></tr>
+        <tr><td><a href="https://drive.google.com/file/d/1vm6lwSjUm9IzrEEiflKTRwmHxuBguRe3/view" target="_blank" rel="noopener">EB alignment deck</a></td><td class="nw">25 Sep 2026</td><td>Latest draft DPO, 2026 deliverables, BETF status</td></tr>
+        <tr><td><a href="https://docs.google.com/document/d/1G4BjvLFnfSQAB45T9kE6-crIG0LNCNqjLhZr2M8bXhM/edit" target="_blank" rel="noopener">Draft concept note: project launch</a></td><td class="nw">14 Oct 2026</td><td>Funding channels, launch programme</td></tr>
+        <tr><td><a href="https://drive.google.com/file/d/1r-0BZb5Kjtd4dsc1WxC8RLdCx-51nJrV/view" target="_blank" rel="noopener">DPO No. 2026-1557</a></td><td class="nw">6 Feb 2026</td><td>DOH Project Steering Committee, TWGs, interim PMO</td></tr>
+        <tr><td><a href="https://drive.google.com/drive/folders/1nSZynW-r1ohHn2K2HjC7YT_1ByoNXpGO" target="_blank" rel="noopener">TORs folder</a> and <a href="https://drive.google.com/drive/folders/1XRZv2PzJM1r8BZrcSnLusy_yHlq0xlJs" target="_blank" rel="noopener">World Bank Comments folder</a></td><td class="nw">1 Nov 2026</td><td>Shortcuts to first-submission TORs and written Bank comments</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 13 TERMS -->
+<section id="terms">
+  <div class="sechead">
+    <div class="row"><span class="secnum">13</span><h2>Terms</h2></div>
+  </div>
+  <div class="tbl mid">
+    <table>
+      <thead><tr><th>Term</th><th>Meaning on this page</th></tr></thead>
+      <tbody>
+        <tr><td>AWFP / AWPB</td><td>Annual Work and Financial Plan (DOH usage) and Annual Work Plan and Budget (Bank usage). Same document.</td></tr>
+        <tr><td>RETF</td><td>Recipient-Executed Trust Fund. DOH and DA procure and pay under Bank rules.</td></tr>
+        <tr><td>BETF</td><td>Bank-Executed Trust Fund. The World Bank contracts and pays; offices give technical clearance.</td></tr>
+        <tr><td>No-objection (NOL)</td><td>The Bank's written clearance needed before DOH acts on a covered document or contract.</td></tr>
+        <tr><td>STEP</td><td>The Bank's online system for tracking procurement plans and contracts.</td></tr>
+        <tr><td>PPSD</td><td>Project Procurement Strategy for Development.</td></tr>
+        <tr><td>RFB, RFQ</td><td>Request for Bids; Request for Quotations.</td></tr>
+        <tr><td>QCBS, CQS</td><td>Quality- and Cost-Based Selection; Selection Based on Consultants' Qualifications.</td></tr>
+        <tr><td>SARO, NCA</td><td>Special Allotment Release Order and Notice of Cash Allocation, issued by DBM.</td></tr>
+        <tr><td>MDS</td><td>Modified Disbursement System account for government funds.</td></tr>
+        <tr><td>ASL</td><td>Authorized signatory letter for withdrawal applications, endorsed by DOF.</td></tr>
+        <tr><td>ESCP, E&amp;S</td><td>Environmental and Social Commitment Plan; environmental and social safeguards.</td></tr>
+        <tr><td>POM</td><td>Project Operations Manual: DOH, DA and multisectoral versions.</td></tr>
+        <tr><td>ISM</td><td>World Bank Implementation Support Mission. The first ran 26 to 29 October 2026.</td></tr>
+        <tr><td>JMC, JAO, DPO</td><td>Joint Memorandum Circular; Joint Administrative Order; Department Personnel Order.</td></tr>
+        <tr><td>NPSC-RP, JPMO, TWG</td><td>National Project Steering Committee; Joint Project Management Office; Technical Working Group.</td></tr>
+        <tr><td>CESR</td><td>Community Event-Based Surveillance and Response.</td></tr>
+        <tr><td>OHGC</td><td>One Health Genomics Consortium, led on the DOH side by RITM.</td></tr>
+        <tr><td>NEDL, PHLS, NLSP, ILIMS</td><td>National Essential Diagnostics List; Philippine Health Laboratory System; National Laboratory Strategic Plan; Integrated Laboratory Information Management System.</td></tr>
+        <tr><td>ADDRL</td><td>DA's Animal Disease Diagnosis and Reference Laboratory.</td></tr>
+        <tr><td>HSRP</td><td>Health System Resilience Project, a separate World Bank loan to DOH.</td></tr>
+        <tr><td>NCE</td><td>No-cost extension of the closing date.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>Prepared by the Epidemiology Bureau and the Resilient Philippines Project Management Office.</b></p>
+    <p>Draft for internal review. Compiled on 1 November 2026 from the Resilient Philippines project folder. Bank inputs reflect verbal comments at the October mission; written comments by office are due from the Bank.</p>
+    <p>Figures in US dollars unless marked. Peso amounts appear as written in the TORs.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var chips = document.querySelectorAll('.chip');
+  var rows = document.querySelectorAll('#pkgtable tbody tr');
+  function apply(f){
+    rows.forEach(function(r){
+      var g = r.getAttribute('data-g');
+      r.hidden = !(f === 'all' || g === f);
+    });
+    chips.forEach(function(c){ c.setAttribute('aria-pressed', String(c.getAttribute('data-f') === f)); });
+    try { localStorage.setItem('rp-filter', f); } catch(e) {}
+  }
+  chips.forEach(function(c){ c.addEventListener('click', function(){ apply(c.getAttribute('data-f')); }); });
+  var saved = null;
+  try { saved = localStorage.getItem('rp-filter'); } catch(e) {}
+  if (saved && document.querySelector('.chip[data-f="'+saved+'"]')) apply(saved);
+})();
+</script>
+
+</body>
+</html>
